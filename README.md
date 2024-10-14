@@ -33,4 +33,4 @@ To get started with the Second-Hand Book project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/second-hand-book-backendgit
+   git clone https://github.com/your-username/second-hand-book-backend.git
