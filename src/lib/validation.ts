@@ -67,7 +67,7 @@ const createBookValidator = () => [
         .isArray().withMessage("Images must be an array of strings.")
         .custom((value) => {
             // Ensure all elements in the array are strings
-            if (!value.every((url) => typeof url === 'string')) {
+            if (!value.every((url:any) => typeof url === 'string')) {
                 throw new Error("Each image URL must be a string.");
             }
             return true;

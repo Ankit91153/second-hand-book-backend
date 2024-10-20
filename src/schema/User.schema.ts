@@ -10,7 +10,6 @@ interface IUser extends Document {
   address: string;
   userType: 'buyer' | 'seller';
   password: string;
-  createdAt: Date;
   isValidPassword(password: string): Promise<boolean>;
   generateAuthToken(): string;
 }
@@ -42,10 +41,9 @@ const userSchema = new Schema<IUser>({
     type: String,
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
+ 
+},{
+  timestamps:true
 });
 
 // Middleware to hash the password before saving
